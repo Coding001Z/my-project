@@ -4,6 +4,11 @@ Digital Balance is a responsive, privacy-first screen-time and focus tracker. It
 
 All personal data stays in the browser's LocalStorage. Data remains in the user's browser and is not synchronized across devices. The app has no account, backend, analytics service, or external runtime dependency.
 
+## Live demo
+
+- **Web app:** [https://coding001z.github.io/my-project/](https://coding001z.github.io/my-project/)
+- **Source repository:** [https://github.com/Coding001Z/my-project](https://github.com/Coding001Z/my-project)
+
 ## Features
 
 - Record, edit, and delete screen-time entries by date, category, and time.
@@ -65,6 +70,27 @@ Use real browser captures with representative local data; do not commit private 
 ## Data and privacy
 
 Screen-time entries, goals, focus sessions, Focus Timer state, and Eye Break preferences are stored in the user's browser. **Data is stored in the user's browser and is not synchronized across devices.** Clearing browser site data removes it. The Settings page provides a confirmed **Reset All Data** action for this app's LocalStorage keys.
+
+## How to use
+
+1. Open the Dashboard to see today's totals and goal progress.
+2. Use **บันทึกเวลา** to add, edit, or delete screen-time entries.
+3. Set daily targets in **เป้าหมาย** and start a session in **Focus Timer**.
+4. Configure eye-break reminders under **ตั้งค่า**.
+5. Open **รายงาน** to review the last seven days.
+6. To erase this app's saved browser data, choose **Reset All Data** in Settings and confirm.
+
+## Known limitations
+
+- Personal data is stored only in LocalStorage on the current browser and device; it does not sync across devices or browsers.
+- Clearing site data or using private browsing may remove saved data.
+- Screen-time entries are entered by the user; the browser cannot automatically observe device-wide app usage.
+- Eye Break Reminder counts time only while a Digital Balance page is open and visible.
+- The app has no accounts, cloud backup, backend, or multi-user support.
+
+## Future architecture
+
+If cross-device sync or managed backups are needed, a future version could introduce a small HTTPS API, an authenticated account service, and a database with per-user access controls. Keep the current LocalStorage-only mode as an offline-friendly option, and add explicit export/import and consent before any personal tracking data leaves the device.
 
 ## Future improvements
 
