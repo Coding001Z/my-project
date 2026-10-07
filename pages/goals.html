@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <meta name="description" content="ตั้งและติดตามเป้าหมาย Screen Time, Social Media และ Focus">
+  <title>เป้าหมาย | Digital Balance</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/app.js" defer></script>
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/eyeBreak.js" defer></script>
+  <script src="../js/goals.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="เมนูหลัก">
+      <a class="brand" href="../index.html#dashboard" aria-label="Digital Balance หน้าหลัก">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M16 4.5c-5.6 0-10.2 4.5-10.2 10.1 0 5.7 4.6 10.2 10.2 10.2 5.7 0 10.2-4.5 10.2-10.2C26.2 9 21.7 4.5 16 4.5Z" stroke="currentColor" stroke-width="2"/><path d="M16 8.5v7.1l4.7 2.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.1 25.4c2.2 1.5 5.4 2.4 8.9 2.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-name">digital<span>balance</span></span>
+      </a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="การนำทาง">
+        <a class="nav-link" href="../index.html#dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="5" rx="1.5"/><rect x="13.5" y="12.5" width="7" height="8" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a>
+        <a class="nav-link" href="time-tracker.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.75h10A2.25 2.25 0 0 1 19.25 6v14.25L12 16.5l-7.25 3.75V6A2.25 2.25 0 0 1 7 3.75Z"/><path d="M8.5 8h7M8.5 11.5h7"/></svg><span>บันทึกเวลา</span></a>
+        <a class="nav-link is-active" href="goals.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><span>เป้าหมาย</span></a>
+        <a class="nav-link" href="focus-timer.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8.25"/><path d="M9 2.75h6M12 4.75v2M18.1 6.9l1.4-1.4M12 9.5V13l2.75 1.75"/></svg><span>Focus Timer</span><span class="nav-badge">NEW</span></a>
+        <a class="nav-link" href="report.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V11M9.3 19.5V5M14.7 19.5v-8M20 19.5V8"/></svg><span>รายงาน</span></a>
+        <a class="nav-link" href="settings.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5Z"/><path d="m19.4 13.5 1.1.85-1.1 1.9-1.35-.4a7.7 7.7 0 0 1-1.4.8l-.25 1.4h-2.2l-.4-1.35a7.7 7.7 0 0 1-1.6 0l-.4 1.35h-2.2l-.25-1.4a7.7 7.7 0 0 1-1.4-.8l-1.35.4-1.1-1.9 1.1-.85a7.8 7.8 0 0 1 0-1.6l-1.1-.85 1.1-1.9 1.35.4a7.7 7.7 0 0 1 1.4-.8l.25-1.4h2.2l.4 1.35a7.7 7.7 0 0 1 1.6 0l.4-1.35h2.2l.25 1.4a7.7 7.7 0 0 1 1.4.8l1.35-.4 1.1 1.9-1.1.85a7.8 7.8 0 0 1 0 1.6Z"/></svg><span>ตั้งค่า</span></a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-quote"><span class="quote-spark" aria-hidden="true">✳</span><p>“ใส่ใจกับเวลาของคุณ<br>แล้วเวลาจะดูแลคุณ”</p><span class="quote-caption">A GENTLE REMINDER</span></div>
+      <div class="profile"><span class="avatar" aria-hidden="true">P</span><span class="profile-copy"><strong>พลอย</strong><small>พื้นที่ส่วนตัว</small></span><button class="icon-button profile-menu" type="button" aria-label="ตัวเลือกโปรไฟล์" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button></div>
+    </aside>
+    <div class="sidebar-scrim" data-close-menu></div>
+    <main class="main-content" id="main-content" tabindex="-1">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button menu-toggle" type="button" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="sidebar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="breadcrumb"><a href="../index.html#dashboard">Workspace</a><span class="breadcrumb-separator">/</span><strong>เป้าหมาย</strong></div></div>
+        <div class="topbar-right"><span class="storage-label"><span aria-hidden="true"></span> SAVED ON THIS DEVICE</span></div>
+      </header>
+      <div class="dashboard-content tracker-content">
+        <section class="welcome-row tracker-welcome" aria-labelledby="goals-title"><div><p class="eyebrow">SMALL GOALS, STEADY PROGRESS</p><h1 id="goals-title">เป้าหมายของคุณ</h1><p class="welcome-subtitle">กำหนดเป้าหมายประจำวันให้เหมาะกับจังหวะชีวิต แล้วติดตามความคืบหน้าได้จาก Dashboard</p></div><a class="back-link" href="../index.html#dashboard"><span aria-hidden="true">←</span> กลับ Dashboard</a></section>
+        <div class="dashboard-data-error" id="goals-error" role="alert" aria-live="assertive" hidden></div>
+        <div class="form-success" id="goals-success" role="status" aria-live="polite" hidden></div>
+        <form id="goals-form" class="goals-page-form" novalidate>
+          <section class="card goals-settings-card" aria-labelledby="screen-goal-title">
+            <div class="goal-setting-heading"><span class="goal-setting-icon screen-goal-icon" aria-hidden="true">◉</span><div><p class="card-kicker">DAILY SCREEN TIME</p><h2 id="screen-goal-title">Screen Time Goal</h2><p>เวลาหน้าจอรวมต่อวันจากรายการ Screen Time ที่บันทึก</p></div></div>
+            <div class="goal-setting-current"><span>ปัจจุบันวันนี้</span><strong id="screen-current">0m</strong><span>เป้าหมาย <strong id="screen-target-label">7h</strong> · เหลือ <strong id="screen-remaining">7h</strong></span><span class="goal-setting-progress" id="screen-progress">0%</span></div>
+            <div class="goal-setting-track" id="screen-track" role="img" aria-label="ความคืบหน้า Screen Time"><span></span></div>
+            <label class="goal-input-label" for="screen-goal-input">เป้าหมายต่อวัน (ชั่วโมง)</label>
+            <input class="goal-hours-input" id="screen-goal-input" name="screen_time" type="number" min="0.25" max="24" step="0.25" required inputmode="decimal">
+          </section>
+          <section class="card goals-settings-card" aria-labelledby="social-goal-title">
+            <div class="goal-setting-heading"><span class="goal-setting-icon social-goal-icon" aria-hidden="true">◎</span><div><p class="card-kicker">DAILY SOCIAL MEDIA</p><h2 id="social-goal-title">Social Media Goal</h2><p>ติดตามเวลาหมวด Social Media จากรายการ Screen Time</p></div></div>
+            <div class="goal-setting-current"><span>ปัจจุบันวันนี้</span><strong id="social-current">0m</strong><span>เป้าหมาย <strong id="social-target-label">2h</strong> · เหลือ <strong id="social-remaining">2h</strong></span><span class="goal-setting-progress" id="social-progress">0%</span></div>
+            <div class="goal-setting-track" id="social-track" role="img" aria-label="ความคืบหน้า Social Media"><span></span></div>
+            <label class="goal-input-label" for="social-goal-input">เป้าหมายต่อวัน (ชั่วโมง)</label>
+            <input class="goal-hours-input" id="social-goal-input" name="social_media" type="number" min="0.25" max="24" step="0.25" required inputmode="decimal">
+          </section>
+          <section class="card goals-settings-card" aria-labelledby="focus-goal-title">
+            <div class="goal-setting-heading"><span class="goal-setting-icon focus-goal-icon" aria-hidden="true">◷</span><div><p class="card-kicker">DAILY FOCUS TIME</p><h2 id="focus-goal-title">Focus Goal</h2><p>รวมเวลาจาก Focus Sessions ที่ทำครบแล้วในวันนี้</p></div></div>
+            <div class="goal-setting-current"><span>ปัจจุบันวันนี้</span><strong id="focus-current">0m</strong><span>เป้าหมาย <strong id="focus-target-label">4h</strong> · เหลือ <strong id="focus-remaining">4h</strong></span><span class="goal-setting-progress" id="focus-progress">0%</span></div>
+            <div class="goal-setting-track" id="focus-track" role="img" aria-label="ความคืบหน้า Focus"><span></span></div>
+            <label class="goal-input-label" for="focus-goal-input">เป้าหมายต่อวัน (ชั่วโมง)</label>
+            <input class="goal-hours-input" id="focus-goal-input" name="focus" type="number" min="0.25" max="24" step="0.25" required inputmode="decimal">
+          </section>
+          <div class="goals-form-actions"><button class="primary-button" type="submit">บันทึกเป้าหมาย</button><span>เป้าหมายจะจัดเก็บไว้ใน LocalStorage ของอุปกรณ์นี้</span></div>
+        </form>
+        <footer class="page-footer tracker-footer">Digital Balance <span>·</span> เป้าหมายของคุณเป็นส่วนตัวและอยู่บนอุปกรณ์นี้</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

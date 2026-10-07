@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <meta name="description" content="ตั้งค่า Eye Break Reminder ของ Digital Balance">
+  <title>ตั้งค่า | Digital Balance</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/app.js" defer></script>
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/eyeBreak.js" defer></script>
+  <script src="../js/eyeBreakSettings.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="เมนูหลัก">
+      <a class="brand" href="../index.html#dashboard" aria-label="Digital Balance หน้าหลัก">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4.5c-5.6 0-10.2 4.5-10.2 10.1 0 5.7 4.6 10.2 10.2 10.2 5.7 0 10.2-4.5 10.2-10.2C26.2 9 21.7 4.5 16 4.5Z" stroke="currentColor" stroke-width="2"/><path d="M16 8.5v7.1l4.7 2.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.1 25.4c2.2 1.5 5.4 2.4 8.9 2.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="brand-name">digital<span>balance</span></span>
+      </a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="การนำทาง">
+        <a class="nav-link" href="../index.html#dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="5" rx="1.5"/><rect x="13.5" y="12.5" width="7" height="8" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a>
+        <a class="nav-link" href="time-tracker.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.75h10A2.25 2.25 0 0 1 19.25 6v14.25L12 16.5l-7.25 3.75V6A2.25 2.25 0 0 1 7 3.75Z"/><path d="M8.5 8h7M8.5 11.5h7"/></svg><span>บันทึกเวลา</span></a>
+        <a class="nav-link" href="goals.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><span>เป้าหมาย</span></a>
+        <a class="nav-link" href="focus-timer.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8.25"/><path d="M9 2.75h6M12 4.75v2M18.1 6.9l1.4-1.4M12 9.5V13l2.75 1.75"/></svg><span>Focus Timer</span><span class="nav-badge">NEW</span></a>
+        <a class="nav-link" href="report.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V11M9.3 19.5V5M14.7 19.5v-8M20 19.5V8"/></svg><span>รายงาน</span></a>
+        <a class="nav-link is-active" href="settings.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5Z"/><path d="m19.4 13.5 1.1.85-1.1 1.9-1.35-.4a7.7 7.7 0 0 1-1.4.8l-.25 1.4h-2.2l-.4-1.35a7.7 7.7 0 0 1-1.6 0l-.4 1.35h-2.2l-.25-1.4a7.7 7.7 0 0 1-1.4-.8l-1.35.4-1.1-1.9 1.1-.85a7.8 7.8 0 0 1 0-1.6l-1.1-.85 1.1-1.9 1.35.4a7.7 7.7 0 0 1 1.4-.8l.25-1.4h2.2l.4 1.35a7.7 7.7 0 0 1 1.6 0l.4-1.35h2.2l.25 1.4a7.7 7.7 0 0 1 1.4.8l1.35-.4 1.1 1.9-1.1.85a7.8 7.8 0 0 1 0 1.6Z"/></svg><span>ตั้งค่า</span></a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-quote"><span class="quote-spark" aria-hidden="true">✳</span><p>“ใส่ใจกับเวลาของคุณ<br>แล้วเวลาจะดูแลคุณ”</p><span class="quote-caption">A GENTLE REMINDER</span></div>
+      <div class="profile"><span class="avatar" aria-hidden="true">P</span><span class="profile-copy"><strong>พลอย</strong><small>พื้นที่ส่วนตัว</small></span><button class="icon-button profile-menu" type="button" aria-label="ตัวเลือกโปรไฟล์" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button></div>
+    </aside>
+    <div class="sidebar-scrim" data-close-menu></div>
+    <main class="main-content" id="main-content" tabindex="-1">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button menu-toggle" type="button" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="sidebar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="breadcrumb"><a href="../index.html#dashboard">Workspace</a><span class="breadcrumb-separator">/</span><strong>ตั้งค่า</strong></div></div>
+        <div class="topbar-right"><span class="storage-label"><span aria-hidden="true"></span> SAVED ON THIS DEVICE</span></div>
+      </header>
+      <div class="dashboard-content tracker-content">
+        <section class="welcome-row tracker-welcome" aria-labelledby="settings-title"><div><p class="eyebrow">MAKE YOUR DIGITAL ROUTINE YOURS</p><h1 id="settings-title">ตั้งค่า</h1><p class="welcome-subtitle">ปรับการเตือนให้เหมาะกับช่วงเวลาการใช้งานของคุณ</p></div><a class="back-link" href="../index.html#dashboard"><span aria-hidden="true">←</span> กลับ Dashboard</a></section>
+        <div class="settings-feedback" id="settings-feedback" role="status" aria-live="polite" hidden></div>
+        <div class="settings-error" id="settings-error" role="alert" aria-live="assertive" hidden></div>
+        <section class="card reminder-settings-card" aria-labelledby="reminder-settings-title">
+          <div class="section-heading">
+            <div><p class="card-kicker">A GENTLE PAUSE FOR YOUR EYES</p><h2 id="reminder-settings-title">Eye Break Reminder</h2></div>
+            <span class="soft-icon peach-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.75 12s3.3-6 9.25-6 9.25 6 9.25 6-3.3 6-9.25 6-9.25-6-9.25-6Z"/><circle cx="12" cy="12" r="2.5"/></svg></span>
+          </div>
+          <p class="reminder-settings-description">เตือนให้พักสายตาหลังใช้งานต่อเนื่องใน Digital Balance ครบเวลาที่กำหนด นับเฉพาะเวลาที่เปิดหน้าเว็บไว้ด้านหน้า</p>
+          <label class="reminder-toggle-row" for="eye-break-enabled">
+            <span><strong>เปิด Eye Break Reminder</strong><small>แสดงคำเตือนแบบไม่บังคับโต้ตอบ และไม่ดึงโฟกัสจากหน้าที่กำลังใช้งาน</small></span>
+            <input id="eye-break-enabled" type="checkbox">
+          </label>
+          <fieldset class="eye-break-intervals">
+            <legend>เตือนหลังใช้งานต่อเนื่อง</legend>
+            <div class="duration-option-list">
+              <label><input type="radio" name="eye-break-interval" value="30"><span>30 นาที</span></label>
+              <label><input type="radio" name="eye-break-interval" value="45"><span>45 นาที</span></label>
+              <label><input type="radio" name="eye-break-interval" value="50"><span>50 นาที</span></label>
+              <label><input type="radio" name="eye-break-interval" value="60"><span>60 นาที</span></label>
+            </div>
+          </fieldset>
+          <div class="reminder-break-info"><span class="reminder-info-icon" aria-hidden="true">◷</span><span>เวลาพักที่แนะนำ <strong>5 นาที</strong> · เลื่อนการเตือนได้ <strong>5 นาที</strong></span></div>
+          <div class="reminder-settings-actions">
+            <button class="secondary-button" id="reset-eye-break" type="button">เริ่มรอบเตือนใหม่</button>
+            <span id="eye-break-settings-status">ตั้งค่าเริ่มต้น: เตือนทุก 50 นาที</span>
+          </div>
+        </section>
+        <section class="card data-reset-card" aria-labelledby="data-reset-title">
+          <div class="section-heading">
+            <div><p class="card-kicker">YOUR DATA, YOUR CHOICE</p><h2 id="data-reset-title">จัดการข้อมูล</h2></div>
+          </div>
+          <p>ลบรายการเวลา เป้าหมาย Focus Session และการตั้งค่า Eye Break ที่บันทึกไว้ในเบราว์เซอร์นี้ทั้งหมด</p>
+          <button class="danger-button" id="reset-all-data" type="button">Reset All Data</button>
+          <div class="data-reset-feedback" id="data-reset-feedback" role="alert" aria-live="assertive" hidden></div>
+        </section>
+        <footer class="page-footer tracker-footer">Digital Balance <span>·</span> การตั้งค่า Eye Break จัดเก็บใน LocalStorage ของอุปกรณ์นี้</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <meta name="description" content="Digital Balance ช่วยให้คุณมองเห็นสมดุลการใช้หน้าจอและเวลาพักผ่อน">
+  <title>Dashboard | Digital Balance</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/storage.js" defer></script>
+  <script src="js/eyeBreak.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#dashboard">ข้ามไปยังเนื้อหาหลัก</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="เมนูหลัก">
+      <a class="brand" href="#dashboard" aria-label="Digital Balance หน้าหลัก">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path
+              d="M16 4.5c-5.6 0-10.2 4.5-10.2 10.1 0 5.7 4.6 10.2 10.2 10.2 5.7 0 10.2-4.5 10.2-10.2C26.2 9 21.7 4.5 16 4.5Z"
+              stroke="currentColor" stroke-width="2" />
+            <path d="M16 8.5v7.1l4.7 2.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M7.1 25.4c2.2 1.5 5.4 2.4 8.9 2.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="brand-name">digital<span>balance</span></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="การนำทาง">
+        <a class="nav-link is-active" href="#dashboard" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" />
+            <rect x="13.5" y="3.5" width="7" height="5" rx="1.5" />
+            <rect x="13.5" y="12.5" width="7" height="8" rx="1.5" />
+            <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a class="nav-link" href="pages/time-tracker.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3.75h10A2.25 2.25 0 0 1 19.25 6v14.25L12 16.5l-7.25 3.75V6A2.25 2.25 0 0 1 7 3.75Z" />
+            <path d="M8.5 8h7M8.5 11.5h7" />
+          </svg>
+          <span>บันทึกเวลา</span>
+        </a>
+        <a class="nav-link" href="pages/goals.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="8.5" />
+            <circle cx="12" cy="12" r="4.5" />
+            <circle cx="12" cy="12" r="1" />
+          </svg>
+          <span>เป้าหมาย</span>
+        </a>
+        <a class="nav-link" href="pages/focus-timer.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="13" r="8.25" />
+            <path d="M9 2.75h6M12 4.75v2M18.1 6.9l1.4-1.4M12 9.5V13l2.75 1.75" />
+          </svg>
+          <span>Focus Timer</span>
+          <span class="nav-badge">NEW</span>
+        </a>
+        <a class="nav-link" href="pages/report.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 19.5V11M9.3 19.5V5M14.7 19.5v-8M20 19.5V8" />
+          </svg>
+          <span>รายงาน</span>
+        </a>
+        <a class="nav-link" href="pages/settings.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5Z" />
+            <path
+              d="m19.4 13.5 1.1.85-1.1 1.9-1.35-.4a7.7 7.7 0 0 1-1.4.8l-.25 1.4h-2.2l-.4-1.35a7.7 7.7 0 0 1-1.6 0l-.4 1.35h-2.2l-.25-1.4a7.7 7.7 0 0 1-1.4-.8l-1.35.4-1.1-1.9 1.1-.85a7.8 7.8 0 0 1 0-1.6l-1.1-.85 1.1-1.9 1.35.4a7.7 7.7 0 0 1 1.4-.8l.25-1.4h2.2l.4 1.35a7.7 7.7 0 0 1 1.6 0l.4-1.35h2.2l.25 1.4a7.7 7.7 0 0 1 1.4.8l1.35-.4 1.1 1.9-1.1.85a7.8 7.8 0 0 1 0 1.6Z" />
+          </svg>
+          <span>ตั้งค่า</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-quote">
+        <span class="quote-spark" aria-hidden="true">✳</span>
+        <p>“ใส่ใจกับเวลาของคุณ<br>แล้วเวลาจะดูแลคุณ”</p>
+        <span class="quote-caption">A GENTLE REMINDER</span>
+      </div>
+      <div class="profile">
+        <span class="avatar" aria-hidden="true">P</span>
+        <span class="profile-copy"><strong>พลอย</strong><small>พื้นที่ส่วนตัว</small></span>
+        <button class="icon-button profile-menu" type="button" aria-label="ตัวเลือกโปรไฟล์" disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="5" cy="12" r="1" />
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="19" cy="12" r="1" />
+          </svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="sidebar-scrim" data-close-menu></div>
+
+    <main class="main-content" id="dashboard" tabindex="-1">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button menu-toggle" type="button" aria-label="เปิดเมนู" aria-expanded="false"
+            aria-controls="sidebar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+          <div class="breadcrumb"><span>Workspace</span><span
+              class="breadcrumb-separator">/</span><strong>Dashboard</strong></div>
+        </div>
+        <div class="topbar-right">
+          <span class="live-data-label"><span aria-hidden="true"></span> LIVE DATA</span>
+          <span class="topbar-divider"></span>
+          <span class="today-date" id="today-date"></span>
+          <button class="icon-button notification-button" type="button" aria-label="การแจ้งเตือน ไม่มีรายการใหม่"
+            disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <section class="welcome-row" aria-labelledby="welcome-title">
+          <div>
+            <p class="eyebrow">YOUR PERSONAL WELLBEING SPACE</p>
+            <h1 id="welcome-title">สวัสดี, พลอย <span aria-hidden="true">✳</span></h1>
+            <p class="welcome-subtitle">ทุกก้าวเล็ก ๆ คือความสมดุลที่ดีขึ้นของคุณ</p>
+          </div>
+          <div class="date-picker" id="date-picker">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="5" width="17" height="15.5" rx="2" />
+              <path d="M7.5 3.5v3M16.5 3.5v3M3.5 9h17" />
+            </svg>
+            <span id="date-picker-label"></span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m7 10 5 5 5-5" />
+            </svg>
+          </div>
+        </section>
+
+        <div class="dashboard-data-error" id="dashboard-data-error" role="alert" aria-live="assertive" hidden></div>
+
+        <section class="hero-grid" aria-label="ภาพรวมเวลาหน้าจอและเป้าหมาย">
+          <article class="card screen-time-card">
+            <div class="card-heading">
+              <div>
+                <p class="card-kicker">SCREEN TIME วันนี้</p>
+                <h2>เวลาหน้าจอของคุณ</h2>
+              </div>
+              <span class="soft-icon green-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="5" y="2.75" width="14" height="18.5" rx="2.5" />
+                  <path d="M10 18h4" />
+                </svg>
+              </span>
+            </div>
+            <div class="screen-time-value" id="today-total">—</div>
+            <p class="screen-time-status" id="today-status"></p>
+            <div class="screen-time-track" id="today-progress-track" role="img" aria-label="กำลังคำนวณเวลาหน้าจอเทียบกับเป้าหมาย">
+              <span></span>
+            </div>
+            <div class="track-labels"><span>0</span><span>เป้าหมาย <strong id="screen-time-goal">—</strong></span></div>
+          </article>
+
+          <article class="card goals-card" id="daily-goals">
+            <div class="card-heading">
+              <div>
+                <p class="card-kicker">KEEP IT BALANCED</p>
+                <h2>เป้าหมายวันนี้</h2>
+              </div>
+              <span class="soft-icon lilac-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3.5 14.5 9l6 .7-4.4 4.1 1.2 5.9-5.3-3-5.3 3 1.2-5.9-4.4-4.1 6-.7L12 3.5Z" />
+                </svg>
+              </span>
+            </div>
+            <div class="goal-main">
+              <div class="goal-ring" id="goal-ring" role="img" aria-label="กำลังคำนวณความคืบหน้าของเป้าหมาย">
+                <div><strong id="goal-percent">—</strong><span>สำเร็จแล้ว</span></div>
+              </div>
+              <div class="goal-copy">
+                <strong>เป้าหมายวันนี้</strong>
+                <p>เป้าหมาย <strong id="goal-duration">—</strong><br>ใช้ไป <strong id="goal-used">—</strong></p>
+                <span class="goal-count">เหลือ <strong id="goal-remaining">—</strong></span>
+              </div>
+            </div>
+            <div class="goal-list-preview">
+              <span><i class="goal-dot complete"></i><span id="goal-status">กำลังคำนวณเป้าหมาย</span></span>
+            </div>
+            <div class="goal-detail-list" aria-label="เป้าหมายโซเชียลมีเดียและเวลาโฟกัส">
+              <article class="goal-detail">
+                <div class="goal-detail-heading"><strong>Social Media</strong><span id="social-goal-progress">—</span></div>
+                <p>ปัจจุบัน <strong id="social-goal-current">—</strong> · เป้าหมาย <strong id="social-goal-target">—</strong> · เหลือ <strong id="social-goal-remaining">—</strong></p>
+                <div class="goal-detail-track" id="social-goal-track" role="img" aria-label="ความคืบหน้าเป้าหมาย Social Media"><span></span></div>
+              </article>
+              <article class="goal-detail">
+                <div class="goal-detail-heading"><strong>Today's Focus Time</strong><span id="focus-goal-progress">—</span></div>
+                <p>ปัจจุบัน <strong id="focus-goal-current">—</strong> · เป้าหมาย <strong id="focus-goal-target">—</strong> · เหลือ <strong id="focus-goal-remaining">—</strong></p>
+                <div class="goal-detail-track" id="focus-goal-track" role="img" aria-label="ความคืบหน้าเป้าหมาย Focus"><span></span></div>
+              </article>
+            </div>
+          </article>
+        </section>
+
+        <section class="middle-grid" aria-label="ข้อมูลการใช้งานและการพักสายตา">
+          <article class="card category-card">
+            <div class="section-heading">
+              <div>
+                <p class="card-kicker">WHERE YOUR TIME GOES</p>
+                <h2>แบ่งตามหมวดหมู่</h2>
+              </div>
+              <button class="text-link" type="button" disabled>ดูรายละเอียด <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="category-total"><strong id="category-total">—</strong><span>เวลารวมวันนี้</span></div>
+            <div class="category-bar" id="category-bar" role="img" aria-label="กำลังคำนวณการแบ่งเวลาตามหมวดหมู่"></div>
+            <ul class="category-list" id="category-list" aria-live="polite"></ul>
+            <p class="category-empty" id="category-empty" hidden>วันนี้ยังไม่มีรายการเวลาให้แสดง</p>
+          </article>
+
+          <article class="card eye-card">
+            <div class="section-heading">
+              <div>
+                <p class="card-kicker">A MOMENT FOR YOU</p>
+                <h2>พักสายตากันไหม?</h2>
+              </div>
+              <span class="soft-icon peach-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2.75 12s3.3-6 9.25-6 9.25 6 9.25 6-3.3 6-9.25 6-9.25-6-9.25-6Z" />
+                  <circle cx="12" cy="12" r="2.5" />
+                </svg>
+              </span>
+            </div>
+            <p class="eye-description">ใช้หน้าจอต่อเนื่องมาสักพักแล้ว<br>ให้ดวงตาได้พักสักครู่นะ</p>
+            <div class="break-countdown"><span
+                class="countdown-dot"></span><span>พักครั้งถัดไปใน</span><strong>12:34</strong></div>
+            <button class="break-button" type="button" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.5 11.5a8.5 8.5 0 1 1-2.5-6" />
+                <path d="M20.5 4.5v5h-5M12 7v5l3 2" />
+              </svg>
+              เริ่มพักสายตา
+            </button>
+            <span class="demo-note">ตัวอย่างหน้าจอ · ยังไม่ทำงานใน Phase นี้</span>
+          </article>
+        </section>
+
+        <section class="lower-grid" aria-label="ภาพรวมประจำสัปดาห์และเครื่องมือ">
+          <article class="card weekly-card" id="weekly-overview">
+            <div class="section-heading weekly-heading">
+              <div>
+                <p class="card-kicker">A LITTLE PROGRESS, EVERY DAY</p>
+                <h2>ภาพรวมประจำสัปดาห์</h2>
+              </div>
+              <span class="week-label" id="week-label">กำลังคำนวณสัปดาห์</span>
+            </div>
+            <div class="weekly-summary-line">
+              <div><strong id="weekly-total">—</strong><span>รวมสัปดาห์นี้</span></div>
+              <div class="weekly-change"><span id="weekly-average">—</span><small>เฉลี่ยต่อวัน</small></div>
+              <span class="weekly-legend"><i></i>เวลาหน้าจอ</span>
+            </div>
+            <div class="chart" id="weekly-chart" role="img" aria-label="กราฟเวลาหน้าจอประจำสัปดาห์">
+              <div class="chart-guides" id="chart-guides" aria-hidden="true"></div>
+              <div class="chart-columns" id="chart-columns"></div>
+            </div>
+            <p class="weekly-empty" id="weekly-empty" hidden>สัปดาห์นี้ยังไม่มีรายการเวลาที่บันทึกไว้</p>
+          </article>
+
+          <div class="tools-column">
+            <article class="card focus-card" id="focus-timer">
+              <div class="focus-top">
+                <span class="focus-symbol" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="13" r="8.25" />
+                    <path d="M9 2.75h6M12 4.75v2M12 9.5V13l2.75 1.75" />
+                  </svg>
+                </span>
+                <span class="focus-tag">FOCUS MODE</span>
+              </div>
+              <h2>เวลาของคุณ<br>โฟกัสกับสิ่งสำคัญ</h2>
+              <p>แบ่งเวลาทำงานเป็นช่วง ๆ<br>แล้วพักให้เต็มที่</p>
+              <a class="focus-button" href="pages/focus-timer.html">เริ่มโฟกัส <span aria-hidden="true">→</span></a>
+              <span class="focus-decor" aria-hidden="true"></span>
+            </article>
+            <article class="card quick-card" id="quick-actions">
+              <div class="section-heading">
+                <div>
+                  <p class="card-kicker">MAKE IT COUNT</p>
+                  <h2>ทางลัด</h2>
+                </div>
+                <span class="quick-spark" aria-hidden="true">✳</span>
+              </div>
+              <div class="quick-actions-list">
+                <a href="pages/time-tracker.html"><span class="quick-action-icon add-icon"
+                    aria-hidden="true">＋</span><span>บันทึกเวลาใช้งาน</span><span class="quick-arrow"
+                    aria-hidden="true">→</span></a>
+                <a href="pages/goals.html"><span class="quick-action-icon target-icon"
+                    aria-hidden="true">◎</span><span>ปรับเป้าหมายวันนี้</span><span class="quick-arrow"
+                    aria-hidden="true">→</span></a>
+                <a href="pages/report.html"><span class="quick-action-icon report-icon"
+                    aria-hidden="true">↗</span><span>ดูรายงานประจำสัปดาห์</span><span class="quick-arrow"
+                    aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="summary-row" aria-label="สรุปประจำสัปดาห์">
+          <article class="weekly-summary-card">
+            <span class="summary-icon" aria-hidden="true">✳</span>
+            <div><span class="summary-label">WEEKLY SUMMARY</span>
+              <p id="weekly-summary-text">เวลาหน้าจอใน Dashboard คำนวณจากรายการที่คุณบันทึกไว้ 🌱</p>
+            </div>
+            <a href="#weekly-overview">ดูภาพรวม <span aria-hidden="true">→</span></a>
+          </article>
+        </section>
+        <footer class="page-footer" id="settings-note">Digital Balance <span>·</span> พื้นที่เล็ก ๆ เพื่อสมดุลที่ดีขึ้น
+          <span class="footer-data-note">ตัวเลขเวลาหน้าจอและสรุปคำนวณจากข้อมูลในอุปกรณ์นี้</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

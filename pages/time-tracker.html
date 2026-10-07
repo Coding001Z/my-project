@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <meta name="description" content="บันทึกและจัดการ Screen Time ของคุณ">
+  <title>บันทึกเวลา | Digital Balance</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/app.js" defer></script>
+  <script src="../js/storage.js" defer></script>
+  <script src="../js/eyeBreak.js" defer></script>
+  <script src="../js/timeTracker.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="เมนูหลัก">
+      <a class="brand" href="../index.html#dashboard" aria-label="Digital Balance หน้าหลัก">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 4.5c-5.6 0-10.2 4.5-10.2 10.1 0 5.7 4.6 10.2 10.2 10.2 5.7 0 10.2-4.5 10.2-10.2C26.2 9 21.7 4.5 16 4.5Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 8.5v7.1l4.7 2.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.1 25.4c2.2 1.5 5.4 2.4 8.9 2.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">digital<span>balance</span></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="การนำทาง">
+        <a class="nav-link" href="../index.html#dashboard">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="5" rx="1.5"/><rect x="13.5" y="12.5" width="7" height="8" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a class="nav-link is-active" href="time-tracker.html" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.75h10A2.25 2.25 0 0 1 19.25 6v14.25L12 16.5l-7.25 3.75V6A2.25 2.25 0 0 1 7 3.75Z"/><path d="M8.5 8h7M8.5 11.5h7"/></svg>
+          <span>บันทึกเวลา</span>
+        </a>
+        <a class="nav-link" href="goals.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+          <span>เป้าหมาย</span>
+        </a>
+        <a class="nav-link" href="focus-timer.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8.25"/><path d="M9 2.75h6M12 4.75v2M18.1 6.9l1.4-1.4M12 9.5V13l2.75 1.75"/></svg>
+          <span>Focus Timer</span><span class="nav-badge">NEW</span>
+        </a>
+        <a class="nav-link" href="report.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V11M9.3 19.5V5M14.7 19.5v-8M20 19.5V8"/></svg>
+          <span>รายงาน</span>
+        </a>
+        <a class="nav-link" href="settings.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.75a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5Z"/><path d="m19.4 13.5 1.1.85-1.1 1.9-1.35-.4a7.7 7.7 0 0 1-1.4.8l-.25 1.4h-2.2l-.4-1.35a7.7 7.7 0 0 1-1.6 0l-.4 1.35h-2.2l-.25-1.4a7.7 7.7 0 0 1-1.4-.8l-1.35.4-1.1-1.9 1.1-.85a7.8 7.8 0 0 1 0-1.6l-1.1-.85 1.1-1.9 1.35.4a7.7 7.7 0 0 1 1.4-.8l.25-1.4h2.2l.4 1.35a7.7 7.7 0 0 1 1.6 0l.4-1.35h2.2l.25 1.4a7.7 7.7 0 0 1 1.4.8l1.35-.4 1.1 1.9-1.1.85a7.8 7.8 0 0 1 0 1.6Z"/></svg>
+          <span>ตั้งค่า</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-quote">
+        <span class="quote-spark" aria-hidden="true">✳</span>
+        <p>“ใส่ใจกับเวลาของคุณ<br>แล้วเวลาจะดูแลคุณ”</p>
+        <span class="quote-caption">A GENTLE REMINDER</span>
+      </div>
+      <div class="profile">
+        <span class="avatar" aria-hidden="true">P</span>
+        <span class="profile-copy"><strong>พลอย</strong><small>พื้นที่ส่วนตัว</small></span>
+        <button class="icon-button profile-menu" type="button" aria-label="ตัวเลือกโปรไฟล์" disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="sidebar-scrim" data-close-menu></div>
+
+    <main class="main-content" id="main-content" tabindex="-1">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button menu-toggle" type="button" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="sidebar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+          <div class="breadcrumb"><a href="../index.html#dashboard">Workspace</a><span class="breadcrumb-separator">/</span><strong>บันทึกเวลา</strong></div>
+        </div>
+        <div class="topbar-right">
+          <span class="storage-label"><span aria-hidden="true"></span> SAVED ON THIS DEVICE</span>
+        </div>
+      </header>
+
+      <div class="dashboard-content tracker-content">
+        <section class="welcome-row tracker-welcome" aria-labelledby="tracker-title">
+          <div>
+            <p class="eyebrow">YOUR SCREEN TIME, YOUR WAY</p>
+            <h1 id="tracker-title">บันทึกเวลาใช้งาน</h1>
+            <p class="welcome-subtitle">เพิ่มและจัดการเวลาหน้าจอของคุณ ข้อมูลจะเก็บไว้ในเบราว์เซอร์บนอุปกรณ์นี้</p>
+          </div>
+          <a class="back-link" href="../index.html#dashboard"><span aria-hidden="true">←</span> กลับ Dashboard</a>
+        </section>
+
+        <section class="card tracker-form-card" aria-labelledby="form-title">
+          <div class="section-heading">
+            <div>
+              <p class="card-kicker">ADD A SCREEN TIME ENTRY</p>
+              <h2 id="form-title">เพิ่มรายการ</h2>
+            </div>
+            <span class="soft-icon green-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </div>
+
+          <div class="form-feedback" id="form-feedback" role="alert" aria-live="assertive" hidden></div>
+          <div class="form-success" id="form-success" role="status" aria-live="polite" hidden></div>
+
+          <form id="time-entry-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="entry-date">วันที่ <span aria-hidden="true">*</span></label>
+                <input id="entry-date" name="date" type="date" required aria-describedby="date-error">
+                <small class="field-error" id="date-error"></small>
+              </div>
+              <div class="form-field">
+                <label for="entry-category">หมวดหมู่ <span aria-hidden="true">*</span></label>
+                <select id="entry-category" name="category" required aria-describedby="category-error">
+                  <option value="">เลือกหมวดหมู่</option>
+                  <option value="social">Social Media · โซเชียลมีเดีย</option>
+                  <option value="study">Study · เรียน</option>
+                  <option value="work">Work · งาน</option>
+                  <option value="entertainment">Entertainment · ความบันเทิง</option>
+                  <option value="exercise">Exercise · ออกกำลังกาย</option>
+                  <option value="other">Other · อื่น ๆ</option>
+                </select>
+                <small class="field-error" id="category-error"></small>
+              </div>
+              <div class="form-field">
+                <label for="entry-start">เวลาเริ่มต้น <span aria-hidden="true">*</span></label>
+                <input id="entry-start" name="startTime" type="time" required aria-describedby="start-error">
+                <small class="field-error" id="start-error"></small>
+              </div>
+              <div class="form-field">
+                <label for="entry-end">เวลาสิ้นสุด <span aria-hidden="true">*</span></label>
+                <input id="entry-end" name="endTime" type="time" required aria-describedby="end-error duration-error duration-preview">
+                <small class="field-error" id="end-error"></small>
+                <small class="field-error" id="duration-error"></small>
+              </div>
+              <div class="time-presets form-field-full">
+                <span class="time-presets-label">กำหนดเวลาสิ้นสุดอย่างรวดเร็ว</span>
+                <div class="time-preset-buttons" aria-label="เพิ่มเวลาจากเวลาเริ่มต้น">
+                  <button class="time-preset" type="button" data-duration-minutes="30" aria-pressed="false" disabled>+30 นาที</button>
+                  <button class="time-preset" type="button" data-duration-minutes="60" aria-pressed="false" disabled>+1 ชั่วโมง</button>
+                  <button class="time-preset" type="button" data-duration-minutes="120" aria-pressed="false" disabled>+2 ชั่วโมง</button>
+                </div>
+                <small class="time-presets-hint">เลือกเวลาเริ่มต้นก่อน แล้วกดปุ่มเพื่อเติมเวลาสิ้นสุดอัตโนมัติ หรือเลือกเวลาเองได้</small>
+              </div>
+              <div class="form-field form-field-full">
+                <label for="entry-note">บันทึกเพิ่มเติม <span class="optional-label">ไม่บังคับ</span></label>
+                <textarea id="entry-note" name="note" rows="3" placeholder="เช่น อ่านหนังสือ ทำรายงาน หรือดูวิดีโอ"></textarea>
+              </div>
+            </div>
+            <p class="duration-preview" id="duration-preview" aria-live="polite">เลือกเวลาเริ่มต้นและเวลาสิ้นสุดเพื่อดูระยะเวลา</p>
+            <div class="form-actions">
+              <button class="primary-button" id="save-entry-button" type="submit">บันทึกรายการ</button>
+              <button class="secondary-button" id="cancel-edit-button" type="button" hidden>ยกเลิกการแก้ไข</button>
+              <span class="form-hint">* จำเป็นต้องกรอก</span>
+            </div>
+          </form>
+        </section>
+
+        <section class="card entries-card" aria-labelledby="entries-title">
+          <div class="section-heading entries-heading">
+            <div>
+              <p class="card-kicker">YOUR TRACKING HISTORY</p>
+              <h2 id="entries-title">รายการที่บันทึก</h2>
+            </div>
+            <div class="entries-totals">
+              <span><strong id="entry-count">0</strong> รายการ</span>
+              <span class="totals-divider" aria-hidden="true"></span>
+              <span>รวม <strong id="total-duration">0 นาที</strong></span>
+            </div>
+          </div>
+          <div class="list-feedback" id="list-feedback" role="alert" aria-live="assertive" hidden></div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span class="empty-state-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 3.75h10A2.25 2.25 0 0 1 19.25 6v14.25L12 16.5l-7.25 3.75V6A2.25 2.25 0 0 1 7 3.75Z"/><path d="M8.5 8h7M8.5 11.5h7"/></svg>
+            </span>
+            <strong>ยังไม่มีรายการบันทึก</strong>
+            <p>เพิ่มรายการแรกของคุณด้วยแบบฟอร์มด้านบน</p>
+          </div>
+          <ul class="entry-list" id="entry-list" aria-live="polite" aria-relevant="additions removals text"></ul>
+        </section>
+
+        <footer class="page-footer tracker-footer">Digital Balance <span>·</span> รายการของคุณจัดเก็บใน LocalStorage ของเบราว์เซอร์</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
